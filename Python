@@ -14,7 +14,7 @@ auth = tweepy.OAuthHandler(consumer_key=consumerkey, consumer_secret=consumersec
 auth.set_access_token(accesstoken, accesstokensecret)
 api = tweepy.API(auth)
 
-searchterms = input("Keyword(s) or Hashtag(s) ")
+searchterms = input("Keyword or Hashtag ")
 numberofsearchterms = int(input("Number of Tweets "))
 
 tweets = tweepy.Cursor(api.search, q=searchterm).items(numberofsearchterms)
